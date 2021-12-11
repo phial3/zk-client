@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name = "File" class= "ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/app.log</file>
+        <rollingPolicy>
+            <fileNamePattern>logs/archives/app-%d{yyyy-MM-dd}.log.gz</fileNamePattern>
+
+            <maxFileSize>1 GB</maxFileSize>
+        </rollingPolicy>
+    </appender>
+    <root level="info">
+        <appender-ref ref="File"/>
+    </root>
+</configuration>
